@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 mt-4">
+            <h2>Track Progress for {{ child.name }}</h2>
+            <p><b>Current Progress:</b></p>
+            <pre>{{ child.progress }}</pre>
+            <form action="/track_progress/{{ child.id }}" method="POST">
+                <div class="form-group">
+                    <label for="progress">Add Progress:</label>
+                    <textarea class="form-control" id="progress" name="progress" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Update Progress</button>
+            </form>
+        </div>
+    </div>
+</div>

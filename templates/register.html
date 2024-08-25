@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .row {
+      justify-content: center;
+    }
+    .col-sm-6 {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      height: 40px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .btn-dark {
+      background-color: #333;
+      border-color: #333;
+    }
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #337ab7;
+    }
+  </style>
+</head>
+<body>
+{% block start %}
+<div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-6 mt-4">
+            <h2>Register form</h2>
+            <form action="/register" method="POST">
+                <div class="form-group">
+                  <label for="role">Role:</label>
+                  <select class="form-control" id="role" name="role">
+                    <option value="User">User</option>
+                    <option value="Volunteer">Volunteer</option>
+                    <option value="NGO Staff">NGO Staff</option>
+                    <option value="Student">Student</option>
+                 </select>
+                </div>
+
+                <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                </div>
+                
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+
+                <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                </div>
+
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <a href="/login" class="btn btn-primary">Login</a>
+            </form>
+        </div>
+    </div>
+  
+</div>
+{% endblock %}
+</body>
+</html>

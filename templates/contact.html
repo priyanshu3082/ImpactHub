@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ImpactHub{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+    <style>
+        .info-box{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto ;
+            gap: 0.5em;
+            max-width: 600px;
+            color: white;
+        }
+        body{
+          min-width: 100vw;
+          min-height: 100vh;
+          background-color: rgb(0,0,33);
+        }
+        #contact{
+            color:white; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar or header content here -->
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1 class="header"><span>Ask Doubt</span></h1>
+            <form action="#">
+                <div class="input-box">
+                   <label for="name">Full Name</label>
+                   <input type="text" name="name" id="name" placeholder="Your Full Name">
+                </div>
+                <div class="input-box">
+                   <label for="name">Send Message</label>
+                   <input type="textarea" name="name" id="name" placeholder="Enter Your message">
+                </div>
+                <div class="btn1">Submit</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
+

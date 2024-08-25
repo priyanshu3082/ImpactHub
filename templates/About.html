@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ImpactHub{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+    <style>
+        .info-box{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto ;
+            gap: 0.5em;
+            max-width: 600px;
+            color: white;
+        }
+        body{
+          min-width: 100vw;
+          min-height: 100vh;
+          background-color: rgb(0,0,33);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navbar or header content here -->
+    </header>
+
+    <main>
+        <div class="info-box">
+            <h1><span>Impact Hub</span></h1>
+            <h3><span>A Learning Platform</span></h3>
+            <p>Impact Hub is an innovative Learning Management System (LMS) designed to bridge the gap between students
+                and mentors in an educational environment. Our platform empowers students by providing them with an
+                intuitive and interactive space for learning, where they can easily access resources, track their
+                progress, and engage directly with their mentors.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
+

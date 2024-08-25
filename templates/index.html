@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Auth system</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="D:\login\templates\styles.css" rel="stylesheet">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      scroll-behavior: smooth;
+      font-family: 'poppins';
+}
+    body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(0,0,33);
+    }
+    
+    .container {
+      margin-top: 175px;
+      margin-bottom: 165px
+    }
+    .row {
+      justify-content: center;
+    }
+    .col-sm-8 {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #337ab7;
+    }
+    .btn-dark {
+      background-color: #333;
+      border-color: #333;
+    }
+    /* Add footer styles */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      clear: both;
+    }
+    footer{
+    background-color: rgb(18,18,62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    gap: 2em;
+    width: 100%;
+    padding: 5em 15%;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Impact Hub</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/About">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-8">
+            <h2>Home page</h2>
+            <a href="/register" class="btn btn-primary mt-3">Register</a>
+            <a href="/login" class="btn btn-dark mt-3">Login</a>
+        </div>
+    </div>
+</div>
+{% block start %} {% endblock %}
+<!-- Add footer section -->
+<footer class="footer">
+  <p>&copy; 2024 Made By Team Alias</p>
+  <div class="col-left">
+            <div class="col-box">
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <span></span>
+            </div>
+            <div class="col-box">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <span>+91 6289890000</span>
+            </div>
+            <div class="col-box">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <span>impactHub@gmail.com</span>
+            </div>
+    </div>
+</footer>
+
+</body>
+</html>
