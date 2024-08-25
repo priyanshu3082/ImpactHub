@@ -1,7 +1,7 @@
-## StatusCODE_1 Team Alias 2024
+# StatusCODE_1 Team Alias 2024
 # Track : Education
 
-## Problem Statement
+# Problem Statement
 The education track encourages participants to build software solutions that enhance the quality of education. Participants might develop applications that provide personalized learning experiences, improve access to education for disadvantaged communities, or help teachers and students collaborate more effectively.
 
 # Impact Hub
