@@ -25,15 +25,15 @@ Impact Hub aims to make a meaningful difference in the lives of children by prov
 Step 1: Clone the Repository
 Start by cloning the repository from GitHub to your local machine.
 
-git clone https://github.com/priyanshu3082/ImpactHub.git
+**git clone https://github.com/priyanshu3082/ImpactHub.git**
 
 Step 2: Navigate to the Project Directory
 
-cd impact-hub
+**cd impact-hub**
 
-Step 3: Create a Virtual Environment (Optional but Recommended)
+Step 3: Create a Virtual Environment 
 
-python3 -m venv venv
+**python -m venv env**
 
 Activate the virtual environment:
 
