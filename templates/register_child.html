@@ -1,3 +1,42 @@
+<style>
+    /* Add some basic styling to the form */
+    form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the form labels */
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Style the form inputs */
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+    /* Style the submit button */
+    button[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Add some spacing between form elements */
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-6 mt-4">
@@ -5,7 +44,7 @@
             <form action="/register_child" method="POST">
                 <div class="form-group">
                     <label for="name">Child Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter child's name" name="name">
+                    <input type="text" required class="form-control" id="name" placeholder="Enter child's name" name="name">
                 </div>
                 
                 <div class="form-group">
@@ -19,7 +58,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-dark">Submit</button>
+                <button type="submit" onclick="alert('Registered');" class="btn btn-dark">Submit</button>
             </form>
         </div>
     </div>

@@ -8,8 +8,6 @@ import os
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
-#app.secret_key = os.urandom(24).hex()
-#app.config[b'\xc2\xac\x91-\xe5\x1b\x7f\xb5\x11\x8c+\xcb)\x92\x82\xbc\x85r\xa0Q&\xac0h'] = environ.get(b'\xc2\xac\x91-\xe5\x1b\x7f\xb5\x11\x8c+\xcb)\x92\x82\xbc\x85r\xa0Q&\xac0h')
 app.secret_key = b'\xc2\xac\x91-\xe5\x1b\x7f\xb5\x11\x8c+\xcb)\x92\x82\xbc\x85r\xa0Q&\xac0h'
 migrate = Migrate(app, db)
 
@@ -128,7 +126,6 @@ def register_child():
         if request.method == 'POST':
             name = request.form['name']
             category = request.form['category']
-            role = request.form['role']
             new_child = Child(name=name, category=category, volunteer_id=user.id)
             db.session.add(new_child)
             db.session.commit()

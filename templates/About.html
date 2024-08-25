@@ -1,48 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "home.html" %}
     <title>{% block title %}ImpactHub{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
     {% block extra_css %}{% endblock %}
-    <style>
-        .info-box{
+    {% block style %}
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        #about{
+            color:white;
             display: flex;
             flex-direction: column;
-            text-align: center;
-            margin: 0 auto ;
-            gap: 0.5em;
-            max-width: 600px;
-            color: white;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            gap:2rem;
         }
-        body{
-          min-width: 100vw;
-          min-height: 100vh;
-          background-color: rgb(0,0,33);
-    }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- Navbar or header content here -->
-    </header>
-
-    <main>
-        <div class="info-box">
+        #about h1{
+            text-align: center;
+            font-size: 4rem;
+            color: rgb(145, 2, 255);
+        }
+        #about h1:hover{
+            text-decoration: underline white;
+        }
+        #about h3{
+            text-align: center;
+            font-size: 2rem;
+        }
+        #about p{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        #about ul li{
+            text-decoration: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+      body {
+        font-family: Quicksand;
+        background-color: rgb(0, 0, 33);
+      }
+      footer{
+        font-size: 20px;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 20vh;
+        padding: 5em 15%;
+  }
+  .about-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-item: center;
+    gap: 2rem;
+  }
+  img{
+    width:300px;
+    height:250px;
+  }
+      {% endblock %}
+  
+      {% block start %}
+      <section id="about">
+        <div class="about-box">
             <h1><span>Impact Hub</span></h1>
             <h3><span>A Learning Platform</span></h3>
-            <p>Impact Hub is an innovative Learning Management System (LMS) designed to bridge the gap between students
-                and mentors in an educational environment. Our platform empowers students by providing them with an
-                intuitive and interactive space for learning, where they can easily access resources, track their
-                progress, and engage directly with their mentors.
+            <p>
+              Impact Hub is an innovative Learning Management System (LMS)
+              designed to bridge the gap between students and mentors in an
+              educational environment. Our platform empowers students by
+              providing them with an intuitive and interactive space for
+              learning, where they can easily access resources, track their
+              progress, and engage directly with their mentors.
             </p>
+            <p>
+              Impact Hub is more than just a learning management system; it's a
+              community where knowledge is shared, progress is tracked, and
+              success is cultivated. Whether you’re a student looking to excel
+              in your studies or a mentor aiming to make a lasting impact,
+              Impact Hub is the platform where your educational goals come to
+              life.
+            </p>
+          <div class="skill">
+            <ul>
+              <li>
+                A variety of multimedia lessons, quizzes, and assignments
+                tailored to different learning styles.
+              </li>
+              <li>
+                Detailed progress reports for both students and mentors,
+                ensuring that learning objectives are met.
+              </li>
+              <li>
+                Facilitate collaboration and communication among students and
+                mentors.
+              </li>
+              <li>
+                A dedicated space where students can ask questions and receive
+                prompt, clear answers from mentors.
+              </li>
+            </ul>
+          </div>
         </div>
-    </main>
+      </section>
 
-    <footer>
-        <!-- Footer content here -->
-    </footer>
-</body>
-</html>
-
+      {% endblock %}

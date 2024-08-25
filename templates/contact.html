@@ -1,37 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}ImpactHub{% endblock %}</title>
+#contact.html                                                                                      {% extends "home.html" %}
+{% block title %}ImpactHub{% endblock %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block extra_css %}{% endblock %}
-    <style>
-        .info-box{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin: 0 auto ;
-            gap: 0.5em;
-            max-width: 600px;
-            color: white;
-        }
+    {% block style %}
         body{
-          min-width: 100vw;
-          min-height: 100vh;
           background-color: rgb(0,0,33);
         }
         #contact{
+            margin:auto;
+            width: 40vw;
+            height: 65vh;
             color:white; 
+            text-align:center;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <!-- Navbar or header content here -->
-    </header>
+        #contact{
+            padding: 2em;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:2em;
+        }
+        form .input-box{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            gap: 1em;
+        }
+        .input-box label{
+            font-size: 1.5em;
+        }
+        form input{
+            font-size: 1.3em;
+            padding: 0.5em 5em;
+            border-radius: 0.5em;
+            border: none;
+            outline: none;
+        }
+        form input:focus{
+            background: rgb(229,229,229);
+        }
+        .btn1{
+            margin-top:10px;
+            padding: 0.4em 2em;
+            border: 4px solid white;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            background-color: transparent;
+        }
+        .btn1:hover{
+            background-color: white;
+            color: rgb(0,0,33);
+            font-weight: 600;
+        }
+        footer{
+            font-size: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            height: 20vh;
+            padding: 5em 15%;
+      }
+    {% endblock %}
 
-    <main>
+    {% block start %}
         <section id="contact">
             <h1 class="header"><span>Ask Doubt</span></h1>
             <form action="#">
@@ -46,11 +87,4 @@
                 <div class="btn1">Submit</div>
             </form>
         </section>
-    </main>
-
-    <footer>
-        <!-- Footer content here -->
-    </footer>
-</body>
-</html>
-
+{% endblock %}
